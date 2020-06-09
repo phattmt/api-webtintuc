@@ -14,7 +14,7 @@ mongoose.connect(uri, {useNewUrlParser: true});
 
 
 var diaDiem = require('./routers/diaDiem.router')
-app.use('/diadiem', diaDiem)
+app.use('/api/diadiem', diaDiem)
 
 
 
