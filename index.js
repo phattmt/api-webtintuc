@@ -1,9 +1,11 @@
 require('dotenv').config();
 const express = require('express')
 const app = express()
-const port = 3333
 
-// const MongoClient = require('mongodb').MongoClient;
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+
+const port = 3333
 var mongoose = require('mongoose');
 const uri  =process.env.MONGOOSE_URL;
 mongoose.connect(uri, {useNewUrlParser: true});
